@@ -350,13 +350,21 @@ namespace ProjetDevA4CalculatorEngine
 
         private void Button12_Click(object sender, EventArgs e)
         {
-            CalcCtrl.GetListsOfNewMetrics();
+            CalcCtrl.InitializeUpdateMetrics();
 
         }
 
         private void Button13_Click(object sender, EventArgs e)
         {
             DAL.UpdateLastDate(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+        }
+
+        private void Button14_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(@"[{""id"":2,""metric_value"":""50"",""metric_date"":""2019-06-26T16:20:11.522403"",""device_type"":2,""device_macaddress"":""00-14-22-01-23-45""}
+,{""id"":3,""metric_value"":""12"",""metric_date"":""2019-06-26T16:20:46.188723"",""device_type"":2,""device_macaddress"":""00-14-22-01-23-45""}
+,{""id"":5,""metric_value"":""14"",""metric_date"":""2019-06-26T16:20:46.188723"",""device_type"":2,""device_macaddress"":""00-14-22-01-23-45""}
+,{""id"":4,""metric_value"":""20"",""metric_date"":""2019-06-26T16:20:47.544581"",""device_type"":1,""device_macaddress"":""00-14-22-01-23-46""}]");
         }
     }
 }
